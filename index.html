@@ -4,22 +4,18 @@
   <meta name="google-site-verification" content="QmBj3qCj_nahu-I2cdTPBZ_hAXzYDHJR07mTmjAOj6s" />
   <meta charset="UTF-8">
   <title>StudyFlow — Learn smarter. Stay organized.</title>
-<meta name="description" content="StudyFlow — a personal study dashboard to manage subjects, homework, schedule, notes, goals and focus time.">
+  <meta name="description" content="StudyFlow — a personal study dashboard to manage subjects, homework, schedule, notes, goals and focus time.">
 
-<!-- Fonts: Fraunces (display) + Sora (interface) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Chart.js for statistics -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 
-<link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ============ MOBILE TOP BAR ============ -->
 <header class="mobile-topbar">
   <button class="icon-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
     <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
@@ -34,7 +30,6 @@
   </button>
 </header>
 
-<!-- ============ SIDEBAR / MOBILE NAV DRAWER ============ -->
 <div class="nav-overlay" id="navOverlay"></div>
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-top">
@@ -99,10 +94,8 @@
   </div>
 </aside>
 
-<!-- ============ MAIN CONTENT ============ -->
 <div class="app-shell">
 
-  <!-- Desktop header -->
   <header class="app-header">
     <div class="header-left">
       <h1 class="header-title" id="pageTitle" data-i18n="nav.dashboard">Dashboard</h1>
@@ -129,7 +122,6 @@
 
   <main class="page-container" id="pageContainer">
 
-    <!-- ===================== DASHBOARD ===================== -->
     <section class="page active" id="page-dashboard">
       <div class="hero-greeting">
         <div>
@@ -234,7 +226,6 @@
       </div>
     </section>
 
-    <!-- ===================== SUBJECTS ===================== -->
     <section class="page" id="page-subjects">
       <div class="page-head-row">
         <p class="page-desc" data-i18n="subjects.desc">Organize everything by subject.</p>
@@ -248,7 +239,6 @@
       </div>
     </section>
 
-    <!-- ===================== HOMEWORK ===================== -->
     <section class="page" id="page-homework">
       <div class="page-head-row">
         <p class="page-desc" data-i18n="hw.desc">Track assignments before deadlines hit.</p>
@@ -290,7 +280,6 @@
       </div>
     </section>
 
-    <!-- ===================== SCHEDULE ===================== -->
     <section class="page" id="page-schedule">
       <div class="page-head-row">
         <p class="page-desc" data-i18n="sched.desc">Your weekly class timetable.</p>
@@ -299,7 +288,6 @@
       <div class="schedule-grid" id="scheduleGrid"></div>
     </section>
 
-    <!-- ===================== POMODORO ===================== -->
     <section class="page" id="page-pomodoro">
       <div class="pomodoro-layout">
         <div class="panel pomodoro-panel">
@@ -352,7 +340,6 @@
       </div>
     </section>
 
-    <!-- ===================== NOTES ===================== -->
     <section class="page" id="page-notes">
       <div class="page-head-row">
         <div class="search-box">
@@ -369,7 +356,6 @@
       </div>
     </section>
 
-    <!-- ===================== GOALS ===================== -->
     <section class="page" id="page-goals">
       <div class="page-head-row">
         <p class="page-desc" data-i18n="goals.desc">Set targets and track your progress.</p>
@@ -390,7 +376,6 @@
       </div>
     </section>
 
-    <!-- ===================== STATISTICS ===================== -->
     <section class="page" id="page-statistics">
       <div class="stat-grid">
         <div class="stat-card">
@@ -439,7 +424,6 @@
       </div>
     </section>
 
-    <!-- ===================== SETTINGS ===================== -->
     <section class="page" id="page-settings">
       <div class="settings-grid">
 
@@ -507,10 +491,8 @@
   </main>
 </div>
 
-<!-- ============ MODALS ============ -->
 <div class="modal-overlay" id="modalOverlay">
 
-  <!-- Task Modal -->
   <div class="modal" id="taskModal" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle">
     <div class="modal-head">
       <h3 id="taskModalTitle" data-i18n="task.add">Add Task</h3>
@@ -548,7 +530,6 @@
     </form>
   </div>
 
-  <!-- Subject Modal -->
   <div class="modal" id="subjectModal" role="dialog" aria-modal="true" aria-labelledby="subjectModalTitle">
     <div class="modal-head">
       <h3 id="subjectModalTitle" data-i18n="subjects.add">Add Subject</h3>
@@ -588,7 +569,6 @@
     </form>
   </div>
 
-  <!-- Homework Modal -->
   <div class="modal" id="homeworkModal" role="dialog" aria-modal="true" aria-labelledby="homeworkModalTitle">
     <div class="modal-head">
       <h3 id="homeworkModalTitle" data-i18n="hw.add">Add Homework</h3>
@@ -639,7 +619,6 @@
     </form>
   </div>
 
-  <!-- Lesson (Schedule) Modal -->
   <div class="modal" id="lessonModal" role="dialog" aria-modal="true" aria-labelledby="lessonModalTitle">
     <div class="modal-head">
       <h3 id="lessonModalTitle" data-i18n="sched.add">Add Lesson</h3>
@@ -648,128 +627,43 @@
     <form id="lessonForm" class="modal-form" novalidate>
       <input type="hidden" id="lessonId">
       <div class="form-row">
-        <label for="lessonDaySelect" data-i18n="form.day">Day</label>
-        <select id="lessonDaySelect"></select>
-      </div>
-      <div class="form-row">
         <label for="lessonSubjectSelect" data-i18n="form.subject">Subject</label>
         <select id="lessonSubjectSelect"></select>
       </div>
+      <div class="form-row">
+        <label for="lessonDaySelect" data-i18n="form.day">Day</label>
+        <select id="lessonDaySelect">
+          <option value="1">Monday</option>
+          <option value="2">Tuesday</option>
+          <option value="3">Wednesday</option>
+          <option value="4">Thursday</option>
+          <option value="5">Friday</option>
+          <option value="6">Saturday</option>
+          <option value="0">Sunday</option>
+        </select>
+      </div>
       <div class="form-row-split">
         <div class="form-row">
-          <label for="lessonStartInput" data-i18n="form.start">Start time</label>
-          <input type="time" id="lessonStartInput" required>
+          <label for="lessonStartTime" data-i18n="form.startTime">Start Time</label>
+          <input type="time" id="lessonStartTime" required>
         </div>
         <div class="form-row">
-          <label for="lessonEndInput" data-i18n="form.end">End time</label>
-          <input type="time" id="lessonEndInput" required>
+          <label for="lessonEndTime" data-i18n="form.endTime">End Time</label>
+          <input type="time" id="lessonEndTime" required>
         </div>
       </div>
-      <span class="field-error" id="lessonTimeError"></span>
-      <div class="form-row-split">
-        <div class="form-row">
-          <label for="lessonRoomInput" data-i18n="form.room">Room</label>
-          <input type="text" id="lessonRoomInput" maxlength="30">
-        </div>
-        <div class="form-row">
-          <label for="lessonTeacherInput" data-i18n="form.teacher">Teacher</label>
-          <input type="text" id="lessonTeacherInput" maxlength="40">
-        </div>
-      </div>
-      <div class="modal-actions">
-        <button type="button" class="btn btn-danger btn-sm" id="deleteLessonBtn" data-i18n="form.delete" hidden>Delete</button>
-        <button type="button" class="btn btn-ghost" data-close-modal data-i18n="form.cancel">Cancel</button>
-        <button type="submit" class="btn btn-primary" data-i18n="form.save">Save</button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Note Modal -->
-  <div class="modal" id="noteModal" role="dialog" aria-modal="true" aria-labelledby="noteModalTitle">
-    <div class="modal-head">
-      <h3 id="noteModalTitle" data-i18n="notes.add">Add Note</h3>
-      <button class="icon-btn modal-close" data-close-modal aria-label="Close">✕</button>
-    </div>
-    <form id="noteForm" class="modal-form" novalidate>
-      <input type="hidden" id="noteId">
       <div class="form-row">
-        <label for="noteTitleInput" data-i18n="form.title">Title</label>
-        <input type="text" id="noteTitleInput" required maxlength="100">
-        <span class="field-error" id="noteTitleError"></span>
-      </div>
-      <div class="form-row">
-        <label for="noteSubjectSelect" data-i18n="form.subject">Subject</label>
-        <select id="noteSubjectSelect"></select>
-      </div>
-      <div class="form-row">
-        <label for="noteContentInput" data-i18n="form.content">Content</label>
-        <textarea id="noteContentInput" rows="6" maxlength="2000"></textarea>
+        <label for="lessonRoomInput" data-i18n="form.room">Room / Location</label>
+        <input type="text" id="lessonRoomInput" maxlength="40">
       </div>
       <div class="modal-actions">
         <button type="button" class="btn btn-ghost" data-close-modal data-i18n="form.cancel">Cancel</button>
         <button type="submit" class="btn btn-primary" data-i18n="form.save">Save</button>
       </div>
     </form>
-  </div>
-
-  <!-- Goal Modal -->
-  <div class="modal" id="goalModal" role="dialog" aria-modal="true" aria-labelledby="goalModalTitle">
-    <div class="modal-head">
-      <h3 id="goalModalTitle" data-i18n="goals.add">Add Goal</h3>
-      <button class="icon-btn modal-close" data-close-modal aria-label="Close">✕</button>
-    </div>
-    <form id="goalForm" class="modal-form" novalidate>
-      <input type="hidden" id="goalId">
-      <div class="form-row">
-        <label for="goalTitleInput" data-i18n="form.title">Title</label>
-        <input type="text" id="goalTitleInput" required maxlength="100">
-        <span class="field-error" id="goalTitleError"></span>
-      </div>
-      <div class="form-row">
-        <label for="goalDescriptionInput" data-i18n="form.description">Description</label>
-        <textarea id="goalDescriptionInput" rows="3" maxlength="300"></textarea>
-      </div>
-      <div class="form-row">
-        <label for="goalDeadlineInput" data-i18n="form.deadline">Deadline</label>
-        <input type="date" id="goalDeadlineInput">
-      </div>
-      <div class="modal-actions">
-        <button type="button" class="btn btn-ghost" data-close-modal data-i18n="form.cancel">Cancel</button>
-        <button type="submit" class="btn btn-primary" data-i18n="form.save">Save</button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Subject Detail Modal -->
-  <div class="modal" id="subjectDetailModal" role="dialog" aria-modal="true" aria-labelledby="subjectDetailTitle">
-    <div class="modal-head">
-      <h3 id="subjectDetailTitle">Subject</h3>
-      <button class="icon-btn modal-close" data-close-modal aria-label="Close">✕</button>
-    </div>
-    <div class="modal-form" id="subjectDetailBody"></div>
-    <div class="modal-actions">
-      <button type="button" class="btn btn-danger" id="subjectDetailDeleteBtn" data-i18n="form.delete">Delete</button>
-      <button type="button" class="btn btn-secondary" id="subjectDetailEditBtn" data-i18n="form.edit">Edit</button>
-      <button type="button" class="btn btn-primary" data-close-modal data-i18n="form.close">Close</button>
-    </div>
-  </div>
-
-  <!-- Confirm Dialog -->
-  <div class="modal modal-sm" id="confirmModal" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle">
-    <div class="modal-head">
-      <h3 id="confirmTitle" data-i18n="confirm.title">Are you sure?</h3>
-    </div>
-    <p class="confirm-message" id="confirmMessage"></p>
-    <div class="modal-actions">
-      <button type="button" class="btn btn-ghost" id="confirmCancelBtn" data-i18n="form.cancel">Cancel</button>
-      <button type="button" class="btn btn-danger" id="confirmOkBtn" data-i18n="confirm.ok">Confirm</button>
-    </div>
   </div>
 
 </div>
-
-<!-- Toast container -->
-<div class="toast-container" id="toastContainer" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>
